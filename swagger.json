@@ -1,0 +1,22 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "Branch Directory API",
+      "version": "1.0.0"
+    },
+    "paths": {
+      "/api/branches": {
+        "get": {
+          "summary": "Get branches with filtering, sorting, and pagination",
+          "parameters": [
+            { "name": "searchBy", "in": "query", "schema": { "type": "string" } },
+            { "name": "searchValue", "in": "query", "schema": { "type": "string" } },
+            { "name": "sortBy", "in": "query", "schema": { "type": "string" } },
+            { "name": "sortOrder", "in": "query", "schema": { "type": "string", "enum": ["asc", "desc"] } },
+            { "name": "page", "in": "query", "schema": { "type": "integer" } },
+            { "name": "limit", "in": "query", "schema": { "type": "integer" } }
+          ]
+        }
+      }
+    }
+  }
